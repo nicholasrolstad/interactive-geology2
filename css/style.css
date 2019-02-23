@@ -22,3 +22,15 @@ html, body {
 .leaflet-touch .leaflet-bar {
   border: none;
 }
+
+.symbPop {
+width:640px !important;
+}
+
+.btn {
+	margin-bottom: 2px;
+}
+
+.btn:not(:hover) {
+	
+}

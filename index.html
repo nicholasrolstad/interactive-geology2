@@ -39,7 +39,7 @@
 
   <!-- Navbar -->
 
-  <nav class="navbar calcite-navbar navbar-fixed-top calcite-bg-dark calcite-text-light calcite-bgcolor-green">
+  <nav class="navbar calcite-navbar navbar-fixed-top calcite-bg-dark calcite-text-light calcite-bgcolor-darker-grey">
      <!-- Menu -->
     <div class="dropdown calcite-dropdown calcite-bg-custom calcite-text-light" role="presentation">
       <a class="dropdown-toggle" role="menubutton" aria-haspopup="true" aria-expanded="false" tabindex="0">
@@ -51,18 +51,18 @@
           <span></span>
         </div>
       </a>
-      <ul class="dropdown-menu calcite-bgcolor-green">
+      <ul class="dropdown-menu calcite-bgcolor-darker-grey">
         <li><a role="menuitem" tabindex="0" data-target="#panelInfo" aria-haspopup="true"><span class="glyphicon glyphicon-info-sign"></span> Info</a></li>
         <li><a class="visible-xs" role="button" data-target="#panelSearch" aria-haspopup="true"><span class="glyphicon glyphicon-search"></span> Search</a></li>
         <li><a role="menuitem" tabindex="0" data-target="#panelBasemaps" aria-haspopup="true"><span class="glyphicon glyphicon-th-large"></span> Basemaps</a></li>
-        <li><a role="menuitem" tabindex="0" id="calciteToggleNavbar" aria-haspopup="true"><span class="glyphicon glyphicon-fullscreen"></span> Full Map</a></li>
+        <li><a role="menuitem" tabindex="0" data-target="#panelLayers" aria-haspopup="true"><span class="glyphicon glyphicon-list"></span> Layers</a></li>
       </ul>
     </div>
     <!-- Title -->
     <div class="calcite-title calcite-overflow-hidden">
-      <span class="calcite-title-main">Calcite Maps</span>
+      <span class="calcite-title-main">Wah-Wah Mountains North & Tule Valley Quadrangles</span>
       <span class="calcite-title-divider hidden-xs"></span>
-      <span class="calcite-title-sub hidden-xs">Starter app for the Esri Leaflet API (jQuery)</span> 
+      <span class="calcite-title-sub hidden-xs">Interactive Geologic Map</span> 
     </div>
      <!-- Nav -->
     <ul class="calcite-nav nav navbar-nav">                    
@@ -78,7 +78,7 @@
 
   <!-- Panel -->
 
-  <div class="calcite-panels calcite-panels-left calcite-bg-custom calcite-text-light panel-group calcite-bgcolor-green" role="tablist" aria-multiselectable="true">
+  <div class="calcite-panels calcite-panels-left calcite-bg-custom calcite-text-light panel-group calcite-bgcolor-darker-grey" role="tablist" aria-multiselectable="true">
   
     <!-- Info Panel -->
 
@@ -108,21 +108,6 @@
       </div>
     </div>
 
-    <!-- Search Panel -->
-
-    <div id="panelSearch" class="panel collapse hidden-sm hidden-md hidden-lg"> 
-      <div id="headingSearch" class="panel-heading" role="tab">
-        <div class="panel-title">
-          <a class="panel-toggle collapsed" role="button" data-toggle="collapse" href="#collapseSearch"  aria-expanded="false" aria-controls="collapseSearch"><span class="glyphicon glyphicon-search" aria-hidden="true"></span><span class="panel-label">Search</span></a> 
-          <a class="panel-close" role="button" data-toggle="collapse" tabindex="0" href="#panelSearch"><span class="esri-icon esri-icon-close" aria-hidden="true"></span></a>        
-        </div>
-      </div>
-      <div id="collapseSearch" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSearch">
-        <div class="panel-body calcite-body-expander">    
-            <div id="geocodeMobile"></div>
-        </div>
-      </div>
-    </div>
 
     <!-- Basemaps Panel -->
 
@@ -139,6 +124,25 @@
             <option value="WHS">Shaded Relief</option>
             <option value="Imagery">Satellite</option>
           </select>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Layers Panel -->
+    <div id="panelLayers" class="panel collapse">
+      <div id="headingLayers" class="panel-heading" role="tab">
+        <div class="panel-title">
+          <a class="panel-toggle" role="button" data-toggle="collapse" href="#collapseLayers" aria-expanded="true" aria-controls="collapseLayers"><span class="glyphicon glyphicon-list" aria-hidden="true"></span><span class="panel-label">Layers</span></a> 
+          <a class="panel-close" role="button" data-toggle="collapse" tabindex="0" href="#panelLayers"><span class="esri-icon esri-icon-close" aria-hidden="true"></span></a>  
+        </div>
+      </div>
+      <div id="collapseLayers" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingLayers">
+        <div class="panel-body">
+        	<div class = "btn-group vertical" role="group">
+        		<button type="button" class="btn btn-primary" id="units-btn" style="width: 100%">Geologic Units</button>   
+				<button type="button" class="btn btn-primary" id="faults-btn" style="width: 100%">Faults</button>
+        		<button type="button" class="btn btn-secondary" id="cs-btn" style="width: 100%">Cross-Section Lines</button>   
+        	</div>
         </div>
       </div>
     </div>
